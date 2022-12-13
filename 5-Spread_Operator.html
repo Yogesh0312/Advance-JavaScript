@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spread Operator</title>
+</head>
+
+<body>
+    <script>
+
+        // For Add Array
+        function sum(name, ...args) {
+            console.log(arguments);
+
+            document.write(`Hello ${name} : `);
+
+            let sum = 0;
+            for (let i in args) {
+                sum += args[i];
+            }
+
+            document.write(sum);
+        }
+
+        var arr = [20, 30, 40];
+        sum("Yogesh", ...arr);
+
+        // Spread Operator with Objects
+        var obj1 = {
+            name: "Yogesh",
+            course: "Btech"
+        }
+
+        var obj2 = {
+            age: 25
+        }
+
+        var obj3 = { ...obj1, ...obj2 };
+
+        console.log(obj3);
+
+
+        // Spread Operator with Arrays
+        // push method
+        var arr1 = [20, 30, 40];
+
+        var arr2 = [...arr1];
+        arr1.push(40)
+        console.log(arr2);
+        console.log(arr1);
+
+        // concat method
+        var arr1 = [20, 30, 40];
+        var arr2 = [20, 30, 40];
+        // var arr3 = arr1.concat(arr2);
+        // var arr3 = [...arr1, ...arr2];
+        var arr3 = [25, ...arr1, ...arr2, 50];
+
+        console.log(arr3);
+
+
+
+
+    </script>
+</body>
+
+</html>

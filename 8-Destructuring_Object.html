@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring Object</title>
+</head>
+
+<body>
+    <script>
+        let user = {
+            name: "Yogesh",
+            age: 25,
+            city: "Delhi"
+        }
+
+        let { name, age, city } = user;
+
+        console.log(city);
+
+
+
+        // Using Alias Name
+        let users = {
+            name: "Yogesh",
+            age: 25,
+            city: "Delhi"
+        }
+
+        let { name: n, age: a, city: c } = users;
+
+        console.log(n);
+    </script>
+</body>
+
+</html>

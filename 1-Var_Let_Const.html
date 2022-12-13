@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Var Let And Const</title>
+</head>
+
+<body>
+    <script>
+        // var = value asign And Variable Declare
+        var x = "Hello";
+        var x = "World";
+        x = "Welcome";
+        document.write(x);
+
+        // let = value asign And Variable Not Declare
+        let x = "Hello";
+        // let x = "World";
+        x = "Welcome";
+        document.write(x);
+
+        // Const = value Not asign And Variable Not Declare
+        let x = "Hello";
+        // Const x = "World";
+        // x = "Welcome";
+        document.write(x);
+
+
+
+        // var = Global Scope
+        if (condition) {
+            var x = "Hello";
+            document.write(x);
+        }
+        document.write(x);
+
+        // let = Block Scope
+        if (condition) {
+            let x = "Hello";
+            document.write(x);
+        }
+        // document.write(x);
+
+        // Const = Block Scope
+        if (condition) {
+            const x = "Hello";
+            document.write(x);
+        }
+        // document.write(x);
+    </script>
+</body>
+
+</html>

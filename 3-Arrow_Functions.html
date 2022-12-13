@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Functions</title>
+</head>
+
+<body>
+    <script>
+        // Before
+        let welcome = function (name) {
+            return `Welcome ${name}`;
+        }
+        console.log(welcome("Yogesh"));
+
+        // With Arrow Function
+        let welcom = (nam) => {
+            return `Welcom ${nam}`;
+        }
+        console.log(welcom("Yogesh"));
+
+        // Arrow Function with Multiple Parameters
+        let welco = (name, age) => {
+            return `Welco ${name} ${age}`;
+        }
+        console.log(welco("Yogesh", 30));
+    </script>
+</body>
+
+</html>
