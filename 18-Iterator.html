@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iterator</title>
+</head>
+
+<body>
+    <script>
+
+        let number = [100, 200, 300];
+        let iter = number[Symbol.iterator]();
+
+        iter.next();
+        console.log(iter.next().value);
+        console.log(iter.next());
+        console.log(iter.next());
+
+
+
+        let numbers = [100, 200, 300, 400, 500];
+        let iters = numbers[Symbol.iterator]();
+
+        let result = iters.next();
+
+        while (!result.done) {
+            console.log(result.value);
+            result = iters.next();
+        }
+
+
+
+
+        let str = "Yogesh Parmar";
+
+        for (let char of str) {
+            console.log(char);
+        }
+
+    </script>
+</body>
+
+</html>

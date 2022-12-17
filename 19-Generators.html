@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generators</title>
+</head>
+
+<body>
+    <script>
+        "use strict";
+        function* generatoit() {
+            yield 'No.1';
+            yield 'No.2';
+            yield 'No.3';
+        }
+
+        let g = generatoit();
+
+        console.log(g.next());
+        g.next();
+        console.log(g.next().value);
+        console.log(g.next());
+
+
+        //    For All Value
+        function* generatoits() {
+            yield 'No.1';
+            yield 'No.2';
+            yield 'No.3';
+        }
+        let h = generatoits();
+        for (let value of h) {
+            console.log(value);
+        }
+
+
+
+        // increment Value
+        function* generatoi() {
+            let nextNum = 300;
+            while (true) {
+                yield (nextNum++);
+            }
+        }
+
+        let y = generatoi();
+        console.log(y.next());
+        y.next();
+        console.log(y.next().value);
+        console.log(y.next());
+
+
+
+        // loop
+        function* generat() {
+            let nextNum = 300;
+            while (true) {
+                yield (nextNum++);
+            }
+        }
+
+        let t = generat();
+
+        for (let value of t) {
+            if (value > 310) break;
+            console.log(value);
+        }
+
+
+
+
+
+
+        // mix
+        function* generate() {
+            yield 55;
+            yield* ['Node', 'Angular', 'React']
+        }
+
+        let o = generate();
+        console.log(o.next());
+        console.log(o.next());
+        console.log(o.next());
+        console.log(o.next());
+        console.log(o.next());
+
+    </script>
+</body>
+
+</html>
